@@ -1,0 +1,15 @@
+# Binaries
+bin/
+dist/
+*.log
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.crash
+.terraform.lock.hcl
+
+# Node / Go / Python etc (general safety)
+node_modules/
+venv/
