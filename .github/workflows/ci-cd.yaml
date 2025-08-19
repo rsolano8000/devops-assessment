@@ -21,7 +21,7 @@ env:
   IMAGE_NAME: helloapp
   STAGING_CLUSTER: gkestaging
   PRODUCTION_CLUSTER: gkeproduction
-  GKE_LOCATION: us-central1-a
+  GKE_LOCATION: us-central1
   K8S_NAMESPACE_STAGING: app-staging
   K8S_NAMESPACE_PROD: app-production
   SECRET_NAME: app-message
