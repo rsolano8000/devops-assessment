@@ -5,15 +5,15 @@ variable "github_repo" { type = string }
 data "google_project" "current" {}
 
 resource "google_iam_workload_identity_pool" "github" {
-  provider                  = google-beta
-  workload_identity_pool_id = "github-pool"
+  provider                  = github
+  workload_identity_pool_id = "gh-pool"
   display_name              = "GitHub Actions Pool"
 }
 
 resource "google_iam_workload_identity_pool_provider" "github" {
-  provider                           = google-beta
-  workload_identity_pool_id          = google_iam_workload_identity_pool.github.workload_identity_pool_id
-  workload_identity_pool_provider_id = "github-provider"
+  provider                           = github
+  workload_identity_pool_id          = gh-pool
+  workload_identity_pool_provider_id = "github"
   display_name                       = "GitHub Provider"
   oidc {
     issuer_uri = "https://token.actions.githubusercontent.com"
